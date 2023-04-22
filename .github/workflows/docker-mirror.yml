@@ -25,5 +25,5 @@ jobs:
       - uses: imjasonh/setup-crane@v0.3
       - name: Mirror
         run: |
-          crane copy docker.io/bellsoft/liberica-runtime-container:jdk-17-slim-glibc ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:jdk-17-slim-glibc
-          crane copy docker.io/bellsoft/liberica-runtime-container:jre-17-slim-glibc ghcr.io/${{ github.repository_owner }}/${{ github.repository }}:jre-17-slim-glibc
+          crane copy docker.io/bellsoft/liberica-runtime-container:jdk-17-slim-glibc ghcr.io/${{ github.repository }}:jdk-17-slim-glibc
+          crane copy docker.io/bellsoft/liberica-runtime-container:jre-17-slim-glibc ghcr.io/${{ github.repository }}:jre-17-slim-glibc
