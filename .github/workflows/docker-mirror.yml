@@ -25,8 +25,5 @@ jobs:
       - uses: imjasonh/setup-crane@v0.3
       - name: Mirror
         run: |
-          for tag in $(cat ./images/${{ matrix.image }}); do
-            crane copy \
-              ${{ matrix.repo }}/${{ matrix.image }}:$tag \
-              ghcr.io/${{ github.repository_owner }}/${{ matrix.image }}:$tag
-          done
+          crane copy docker.io/bellsoft/liberica-runtime-container:jdk-17-slim-glibc ghcr.io/${{ github.repository_owner }}/liberica-runtime-container:jdk-17-slim-glibc
+          crane copy docker.io/bellsoft/liberica-runtime-container:jre-17-slim-glibc ghcr.io/${{ github.repository_owner }}/liberica-runtime-container:jre-17-slim-glibc
