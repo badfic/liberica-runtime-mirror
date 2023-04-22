@@ -20,7 +20,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.PACKAGES_PAT }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/setup-go@v4
       - uses: imjasonh/setup-crane@v0.3
       - name: Mirror
